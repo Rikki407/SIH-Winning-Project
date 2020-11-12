@@ -1,0 +1,75 @@
+#myInput {
+  width: 600px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.col1 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  margin: 1rem auto;
+  text-align: right;
+}
+div.scroll {
+  margin: 4px, 4px;
+  padding: 4px;
+  height: 550px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+div.card {
+  width: 80%;
+  padding: 0%;
+  margin-bottom: 0.5rem;
+}
+h5.c-title {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+p.c-text {
+  font-size: 0.55rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-outline-primary {
+  line-height: 1;
+  padding: 0.15rem 0.5rem;
+}
+.img-thumbnail {
+  height: 27rem;
+  margin: auto;
+}
+.photo {
+  margin-top: 1rem;
+  text-align: center;
+}
+.fas {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+.form-inline {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+#search {
+  border: none;
+  background: white;
+  padding: 10px;
+  font-size: 1.5rem;
+}

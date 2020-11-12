@@ -1,0 +1,27 @@
+/**
+ * New model file
+ */
+
+namespace composers.participants
+
+abstract participant Person identified by ID{
+  o String firstname
+  o String lastname
+  o String title
+  o String ID
+}
+
+
+participant Doctor extends Person{
+  o String department
+  o String salary
+}
+
+participant Patient extends Person{
+  o DateTime lastvisit
+  o Double balanceDue
+}
+
+// usually just looks at stuff, doesn't really do transactions
+participant Administrator extends Person{
+}

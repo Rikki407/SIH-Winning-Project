@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SignIn</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        />
+        <style>
+            video {
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                margin-top: 15px;
+            }
+        </style>
+        <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: 'AIzaSyB0l7z57FE06ge8Hmxvfr5c2wZWn73Sw_w',
+                authDomain: 'fir-phoneauth-dfbe9.firebaseapp.com',
+                databaseURL: 'https://fir-phoneauth-dfbe9.firebaseio.com',
+                projectId: 'fir-phoneauth-dfbe9',
+                storageBucket: 'fir-phoneauth-dfbe9.appspot.com',
+                messagingSenderId: '341123160990',
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css"
+        />
+        <link
+            href="css/style.css"
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+        />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="/formstyle.css" />
+    </head>
+    <body onload="init()">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <form action="/register" method="POST">
+                            <div class="container">
+                                <h3>Govt ID Registeration</h3>
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    Create an account for MaxHealthcare
+                                </h6>
+                                <br />
+
+                                <input
+                                    class="input-block-level"
+                                    type="text"
+                                    name="name"
+                                    placeholder="Name"
+                                /><br />
+                                <input
+                                    class="input-block-level in"
+                                    id="1"
+                                    type="Email"
+                                    name="username"
+                                    placeholder="Email"
+                                /><br />
+                                <input
+                                    class="input-block-level in"
+                                    id="2"
+                                    type="password"
+                                    name="password"
+                                    placeholder="password"
+                                /><br />
+                                <input
+                                    class="input-block-level"
+                                    type="text"
+                                    name="fname"
+                                    placeholder="Father's Name"
+                                /><br />
+
+                                <input
+                                    class="input-block-level"
+                                    type="text"
+                                    name="dob"
+                                    placeholder="DOB DD/MM/YYYY"
+                                /><br />
+
+                                <input
+                                    class="input-block-level"
+                                    type="text"
+                                    name="uid"
+                                    placeholder="UID no."
+                                /><br />
+
+                                <textarea
+                                    placeholder="Enter previous record here"
+                                    rows="3"
+                                    cols="60"
+                                    class="md-textarea form-control"
+                                ></textarea
+                                ><br />
+                                <div id="inner_container">
+                                    <div id="loading">Loading...</div>
+                                    <div id="loaded" class="hidden2">
+                                        <div id="main">
+                                            <div id="user-signed-in" class="hidden2">
+                                                <div id="user-info">
+                                                    <div id="phone"></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <p>
+                                                    <button class="btn btn-md btn-success" id="sign-out">verified</i></button>
+                                                </p>
+                                            </div>
+                                            <div id="user-signed-out" class="hidden2">
+                                                <div id="firebaseui-spa">
+                                                    <div id="firebaseui-container"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/> <br/>
+                                <button
+                                    class="btn btn-primary btn-lg btn-block"
+                                    type="Submit"
+                                >
+                                   Proceed
+                                </button>
+                                <br /><br />
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <!-- adddddd -->
+                                        <!-- <h6><center><small>OR</small></center></h6>
+                            <h6 class="text-muted"><center><small>Sign in with</small></center></h6> -->
+                                    </div>
+                                    <div
+                                        class="col-lg-6 col-md-6 col-sm-6"
+                                    ></div>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                <div class="col" style="margin-top: 105px;" onload="init();">
+                    <div class="row">
+                        <div class="col">
+                            <button
+                                class="btn btn-info"
+                                onclick="startWebcam();"
+                            >
+                                Start WebCam
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button
+                                class="btn btn-success"
+                                onclick="snapshot();"
+                            >
+                                Take Snapshot
+                            </button>
+                        </div>
+                    </div>
+                    <video
+                        onclick="snapshot(this);"
+                        width="419"
+                        height="380"
+                        id="video"
+                        controls
+                        autoplay
+                    ></video>
+                    <hr />
+                    <p>
+                        <canvas id="myCanvas" width="400" height="350"></canvas>
+                    </p>
+                    <form action="/auth/image" method="POST">
+                        <input type="hidden" name="img" id="screenshot" />
+                        <input class="btn-outline-success" type="submit" />
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <script src="/auth.js"></script>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="/main.js"></script>
+    </body>
+</html>

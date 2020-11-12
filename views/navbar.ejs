@@ -1,0 +1,556 @@
+<body class=" ">
+    <!-- START TOPBAR -->
+    <div class='page-topbar gradient-blue1'>
+        <div class='logo-area crypto'>
+            <% console.log("@@@",currentUser)%>
+        </div>
+        <div class='quick-area'>
+            <div class='pull-left'>
+                <ul class="info-menu left-links list-inline list-unstyled">
+                    <li class="sidebar-toggle-wrap">
+                        <a data-toggle="sidebar" class="sidebar_toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <% if(currentUser.type == "patient") { %>
+                    <li class="topnav-item active item2">
+                        <a href="/patients-reports" class="nav-link w-text">
+                          <i class="fa fa-area-chart mr-10"></i>Reports
+                        </a>
+                    </li>
+                    <li class="topnav-item item3">
+                        <a href="/patients-prescriptions" class="nav-link w-text">
+                          <i class="fa fa-sitemap mr-10"></i>Prescriptions
+                        </a>
+                    </li>
+                    <% } %>
+
+
+                    <li class="hidden-sm hidden-xs searchform">
+                        <form action="#" method="post">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                                <input type="text" class="form-control animated fadeIn" placeholder="Search & Enter">
+                            </div>
+                            <input type='submit' value="">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class='pull-right'>
+                <ul class="info-menu right-links list-inline list-unstyled">
+                    <li class="notify-toggle-wrapper spec">
+                        <a href="/index-hos-dashboard" data-toggle="dropdown" class="toggle">
+                            <i class="fa fa-bell"></i>
+                            <span class="badge badge-accent">3</span>
+                        </a>
+                        <ul class="dropdown-menu notifications animated fadeIn">
+                            <li class="total">
+                                <span class="small">
+                                You have <strong>3</strong> new notifications.
+                                <a href="javascript:;" class="pull-right">Mark all as Read</a>
+                            </span>
+                            </li>
+                            <li class="list">
+
+                                <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
+                                    <li class="unread available">
+                                        <!-- available: success, warning, info, error -->
+                                        <a href="javascript:;">
+                                            <div class="notice-icon">
+                                                <i class="fa fa-check"></i>
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Successful transaction of 0.01 BTC</strong>
+                                                    <span class="time small">15 mins ago</span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="unread away">
+                                        <!-- available: success, warning, info, error -->
+                                        <a href="javascript:;">
+                                            <div class="notice-icon">
+                                                <i class="fa fa-clock-o"></i>
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>4 of Pending Transactions!</strong>
+                                                    <span class="time small">45 mins ago</span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class=" busy">
+                                        <!-- available: success, warning, info, error -->
+                                        <a href="javascript:;">
+                                            <div class="notice-icon">
+                                                <i class="fa fa-times"></i>
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Cancelled Order of 200 ICO</strong>
+                                                    <span class="time small">1 hour ago</span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class=" available">
+                                        <!-- available: success, warning, info, error -->
+                                        <a href="javascript:;">
+                                            <div class="notice-icon">
+                                                <i class="fa fa-check"></i>
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Great Speed Notify of 1.34 LTC</strong>
+                                                    <span class="time small">14th Mar</span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li class="external">
+                                <a href="javascript:;">
+                                    <span>Read All Notifications</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="message-toggle-wrapper spec">
+                        <a href="/index-hos-dashboard" data-toggle="dropdown" class="toggle mr-15">
+                            <i class="fa fa-envelope"></i>
+                            <span class="badge badge-accent">7</span>
+                        </a>
+                        <ul class="dropdown-menu messages animated fadeIn">
+
+                            <li class="list">
+
+                                <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
+                                    <li class="unread status-available">
+                                        <a href="javascript:;">
+                                            <div class="user-img">
+                                                <img src="../data/profile/avatar-1.png" alt="user-image" class="img-circle img-inline">
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Clarine Vassar</strong>
+                                                    <span class="time small">- 15 mins ago</span>
+                                                <span class="profile-status available pull-right"></span>
+                                                </span>
+                                                <span class="desc small">
+                                                    Lorem ipsum dolor sit elit fugiat molest.
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class=" status-away">
+                                        <a href="javascript:;">
+                                            <div class="user-img">
+                                                <img src="../data/profile/avatar-2.png" alt="user-image" class="img-circle img-inline">
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Brooks Latshaw</strong>
+                                                    <span class="time small">- 45 mins ago</span>
+                                                <span class="profile-status away pull-right"></span>
+                                                </span>
+                                                <span class="desc small">
+                                                    Lorem ipsum dolor sit elit fugiat molest.
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class=" status-busy">
+                                        <a href="javascript:;">
+                                            <div class="user-img">
+                                                <img src="../data/profile/avatar-3.png" alt="user-image" class="img-circle img-inline">
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Clementina Brodeur</strong>
+                                                    <span class="time small">- 1 hour ago</span>
+                                                <span class="profile-status busy pull-right"></span>
+                                                </span>
+                                                <span class="desc small">
+                                                    Lorem ipsum dolor sit elit fugiat molest.
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class=" status-offline">
+                                        <a href="javascript:;">
+                                            <div class="user-img">
+                                                <img src="../data/profile/avatar-4.png" alt="user-image" class="img-circle img-inline">
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Carri Busey</strong>
+                                                    <span class="time small">- 5 hours ago</span>
+                                                <span class="profile-status offline pull-right"></span>
+                                                </span>
+                                                <span class="desc small">
+                                                    Lorem ipsum dolor sit elit fugiat molest.
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class=" status-offline">
+                                        <a href="javascript:;">
+                                            <div class="user-img">
+                                                <img src="../data/profile/avatar-5.png" alt="user-image" class="img-circle img-inline">
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Melissa Dock</strong>
+                                                    <span class="time small">- Yesterday</span>
+                                                <span class="profile-status offline pull-right"></span>
+                                                </span>
+                                                <span class="desc small">
+                                                    Lorem ipsum dolor sit elit fugiat molest.
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class=" status-available">
+                                        <a href="javascript:;">
+                                            <div class="user-img">
+                                                <img src="../data/profile/avatar-1.png" alt="user-image" class="img-circle img-inline">
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Verdell Rea</strong>
+                                                    <span class="time small">- 14th Mar</span>
+                                                <span class="profile-status available pull-right"></span>
+                                                </span>
+                                                <span class="desc small">
+                                                    Lorem ipsum dolor sit elit fugiat molest.
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class=" status-busy">
+                                        <a href="javascript:;">
+                                            <div class="user-img">
+                                                <img src="../data/profile/avatar-2.png" alt="user-image" class="img-circle img-inline">
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Linette Lheureux</strong>
+                                                    <span class="time small">- 16th Mar</span>
+                                                <span class="profile-status busy pull-right"></span>
+                                                </span>
+                                                <span class="desc small">
+                                                    Lorem ipsum dolor sit elit fugiat molest.
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class=" status-away">
+                                        <a href="javascript:;">
+                                            <div class="user-img">
+                                                <img src="../data/profile/avatar-3.png" alt="user-image" class="img-circle img-inline">
+                                            </div>
+                                            <div>
+                                                <span class="name">
+                                                    <strong>Araceli Boatright</strong>
+                                                    <span class="time small">- 16th Mar</span>
+                                                <span class="profile-status away pull-right"></span>
+                                                </span>
+                                                <span class="desc small">
+                                                    Lorem ipsum dolor sit elit fugiat molest.
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li class="external">
+                                <a href="javascript:;">
+                                    <span>Read All Messages</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="profile">
+                        <a href="/index-hos-dashboard" data-toggle="dropdown" class="toggle">
+                            <img src="../data/profile/profile.jpg" alt="user-image" class="img-circle img-inline">
+                            <span>Arnold Ramsy <i class="fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu profile animated fadeIn">
+                            <li>
+                                <a href="https://medical-dash.netlify.app/html/crypto-account-setting.html">
+                                    <i class="fa fa-wrench"></i> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://medical-dash.netlify.app/html/crypto-profile.html">
+                                    <i class="fa fa-user"></i> Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://medical-dash.netlify.app/html/crypto-faq.html">
+                                    <i class="fa fa-info"></i> Help
+                                </a>
+                            </li>
+                            <li class="last">
+                                <a href="https://medical-dash.netlify.app/html/crypto-login.html">
+                                    <i class="fa fa-lock"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- END TOPBAR -->
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid container-fluid">
+
+        <!-- SIDEBAR - START -->
+
+        <div class="page-sidebar fixedscroll">
+
+            <!-- MAIN MENU - START -->
+            <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+
+                <ul class='wraplist'>
+                    <% if(currentUser.type == "reception") { %>
+                    <li class='menusection'>Main</li>
+                    <li class="open">
+                        <a href="/index-hos-dashboard">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/1.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if(currentUser.type == "patient") { %>
+                    <li class="">
+                        <a href="/hos-patient-dash">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/3.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Patient Dashboard</span>
+                        </a>
+                    </li>
+                    <% }%>
+
+                    <% if(currentUser.type == "pharma") { %>
+                    <li class="">
+                        <a href="/pharmacy">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/3.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Pharmacy Dashboard</span>
+                        </a>
+                    </li>
+                    <% }%>
+
+                    <% if(currentUser.type == "doctor") { %>
+                    <li class="">
+                        <a href="/hos-doctor-dash">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/4.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Doctor Dashboard</span>
+                        </a>
+                    </li>
+                    <%}%>
+
+                    <% if(currentUser.type == "lab") { %>
+                        <li class="">
+                            <a href="/lab-dash">
+                                <i class="img">
+                                    <img src="../data/hos-dash/icons/4.png" alt="" class="width-20">
+                                </i>
+                                <span class="title">Lab Dashboard</span>
+                            </a>
+                        </li>
+                    <% } %>
+
+                    <% if(currentUser.type == "reception") { %>
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/2.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Doctors</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="/hos-all-doctors">All Doctors</a>
+                            </li>
+                            <li>
+                                <a class="" href="/hos-add-doctor">Add Doctor</a>
+                            </li>
+                            <li>
+                                <a class="" href="/hos-edit-doctor">Edit Doctor</a>
+                            </li>
+                            <li>
+                                <a class="" href="/hos-doctor-profile">Doctor Profile</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <% } %>
+
+                    <% if(currentUser.type == "reception") { %>
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/5.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Patients</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="/hos-all-patients">All Patients</a>
+                            </li>
+                            <li>
+                                <a class="" href="/hos-add-patient">Add Patient</a>
+                            </li>
+                            <li>
+                                <a class="" href="/hos-edit-patient">Edit Patient</a>
+                            </li>
+                            <li>
+                                <a class="" href="/hos-patient-profile">Patient Profile</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <% } %>
+
+                    <% if(currentUser.type == "patient" || currentUser.type == "reception") { %>
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/6.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Appointments</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <% if(currentUser.type == "reception") { %>
+                            <li>
+                                <a class="" href="/hos-book-appointment-reception">Book Appointment</a>
+                            </li>
+                            <% } %>
+                            <% if(currentUser.type == "patient") { %>
+                                <li>
+                                    <a class="" href="/hos-book-appointment-patient">Book Appointment</a>
+                                </li>
+                            <% } %>
+                            <% if(currentUser.type == "reception") { %>
+                            <li>
+                                <a class="" href="/hos-schedule">Doctor Schedule</a>
+                            </li>
+                            <% } %>
+                            <% if(currentUser.type == "patient") { %>
+                            <li>
+                                <a class="" href="/video-consultation">Book Video Consultation</a>
+                            </li>
+                            <% } %>
+                        </ul>
+                    </li>
+                    <% } %>
+
+                    <% if(currentUser.type == "patient" || currentUser.type == "reception" || currentUser.type == "pharma") { %>
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/7.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Billing</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="/hos-payment">Payments</a>
+                            </li>
+                            <% if(currentUser.type == "reception" || currentUser.type == "pharma") { %>
+                            <li>
+                                <a class="" href="/hos-add-payment">Add Payment</a>
+                            </li>
+                            <% } %>
+                            <li>
+                                <a class="" href="/hos-patient-invoice">Patient Invoice</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <% } %>
+
+                    <% if(currentUser.type == "doctor" || currentUser.type == "reception" || currentUser.type == "lab") { %>
+                    <li class="">
+                        <a href="/hos-events">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/9.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Event Management</span>
+                        </a>
+                    </li>
+                    <% } %>
+
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/10.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Access Pages</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="/login">Login</a>
+                            </li>
+                            <li>
+                                <a class="" href="/auth/register">Registration</a>
+                            </li>
+                            <li>
+                                <a class="" href="/ui-404">404</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="img">
+                                <img src="../data/hos-dash/icons/11.png" alt="" class="width-20">
+                            </i>
+                            <span class="title">Support</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="" href="/hos-faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a class="" href="/hos-support">Help center</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- MAIN MENU - END -->
+
+        </div>
+
+        <!-- CHATBOT -->
+        <% include chatbot/chat-index %>

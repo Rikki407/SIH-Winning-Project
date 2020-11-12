@@ -1,0 +1,7 @@
+2017-09-24T09:27:46.290Z ERROR   HLFConnectionManager    :fabric-client()          [Peer.js]: sendProposal - timed out after:300000 {}$
+2017-09-24T09:27:46.291Z ERROR   HLFConnectionManager    :fabric-client()          [client-utils.js]: sendPeersProposal - Promise is rejected: Error: REQUEST_TIMEOUT
+    at Timeout._onTimeout (/usr/local/lib/node_modules/composer-rest-server/node_modules/fabric-client/lib/Peer.js:107:19)
+    at ontimeout (timers.js:469:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:264:5) {}$
+2017-09-24T09:27:46.291Z ERROR   HLFConnection           :queryChainCode()         {"message":"Error trying to query business network. Error: REQUEST_TIMEOUT","stack":"Error: Error trying to query business network. Error: REQUEST_TIMEOUT\n    at channel.queryByChaincode.then.catch (/usr/local/lib/node_modules/composer-rest-server/node_modules/composer-connector-hlfv1/lib/hlfconnection.js:754:34)\n    at <anonymous>"}$

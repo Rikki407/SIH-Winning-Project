@@ -1,0 +1,49 @@
+/**
+ * New model file
+ */
+
+namespace composers.financial
+import composers.participants.Patient
+
+//overarching expenses of hospital
+concept HospitalExpenses {
+  o Double supplies
+  o Double staff
+  o Double medications
+}
+
+asset Bill identified by billID {
+  o String billID
+  o String patientID
+  o String moneyID
+  o Double amount
+  o Boolean paid
+}
+
+asset HospitalSupplies identified by supplyID {
+  o String supplyID
+  o String drugs
+}
+
+asset HospitalMoneyPool identified by moneyID {
+  o String moneyID
+  o Double moneypool
+}
+
+enum SupplyStatus {
+  o full
+  o low
+  o empty
+}
+
+enum InsuranceProviders {
+  o UnitedHealthCare
+}
+
+transaction SendBill {
+  o Bill bill
+}
+
+transaction PayBill {
+  o Bill bill
+}

@@ -1,0 +1,127 @@
+.bod{
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+  align-items: start;
+  justify-items: center;
+  height: 86vh;
+  padding: 20px;
+}
+
+.prescription-container{
+  box-shadow: 10px 10px 8px #888888;
+  background-image: url('../images/paper-2.png');
+  background-size: 140%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px;
+  display: grid;
+  grid-template-areas:
+                        "dr-name . . hos-name"
+                        "dr-edu . . hos-ad"
+                        "dr-clinic . . hos-mob"
+                        "dr-clinic-ad . . prescription-id"
+                        "dr-mob . . date1"
+                        ". med1 med1 ."
+                        ". med2 med2 ."
+                        ". med3 med3 ."
+                        ". . . sign"
+                        "prescription-send-file prescription-send-file . .";
+}
+
+.dr-name{
+  grid-area: dr-name;
+}
+
+.prescription-id{
+  grid-area: prescription-id;
+}
+
+.hos-name{
+  grid-area: hos-name;
+}
+
+.dr-edu{
+  grid-area: dr-edu;
+}
+
+.hos-ad{
+  grid-area: hos-ad;
+}
+
+.dr-clinic{
+  grid-area: dr-clinic;
+}
+
+.hos-mob{
+  grid-area: hos-mob;
+}
+
+.dr-clinic-ad{
+  grid-area: dr-clinic-ad;
+}
+
+.dr-mob{
+  grid-area: dr-mob;
+}
+
+.med1{
+  grid-area: med1;
+}
+
+.med2{
+  grid-area: med2;
+}
+
+.med3{
+  grid-area: med3;
+}
+
+.prescription-item{
+  color: #555555;
+  margin-bottom: -7px;
+}
+
+.hand{
+  font-family: 'Dawning of a New Day', cursive;
+  font-size: 30px;
+  color: #16264c;
+}
+
+.date1{
+  padding-top: 25px;
+  padding-bottom: 40px;
+  grid-area: date1;
+}
+
+.med{
+  padding-bottom: 40px;
+}
+
+.sign{
+  grid-area: sign;
+  padding-bottom: 40px;
+}
+
+.bold1{
+    font-weight: bold;
+}
+
+.prescription-send-file{
+  grid-area: prescription-send-file;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.button5 {
+  background-color: transparent;
+  color: black;
+  border: 2px solid #555555;
+  padding: 15px 20px;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}

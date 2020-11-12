@@ -1,0 +1,40 @@
+.patient--information--container{
+  height: 51vh;
+  background-color: #eee;
+  width: 100%;
+  padding: 0 10px 0 0;
+  overflow: auto;
+}
+
+.patient--card{
+  padding: 2.5px;
+  margin: 5px 5px 0 5px;
+  width: 100%;
+}
+
+.patient--cards--container{
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body{
+  padding: 0 18px;
+}
+
+.patient--image{
+  width: auto !important;
+  border-radius: 50%;
+}
+
+.patient--image--background{
+  background-color: background: rgba(77, 156, 248, 1.0) !important;
+}
+
+.patient--alarms{
+  margin-top: -18px;
+  margin-bottom: 5px;
+}
+
+.alarm--input{
+  background-color: white;
+}

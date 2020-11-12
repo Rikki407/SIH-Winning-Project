@@ -1,0 +1,139 @@
+.bod{
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+  height: 100vh;
+  align-items: start;
+  justify-items: center;
+  height: 86vh;
+  padding: 20px;
+}
+
+.lab-report-container{
+  box-shadow: 10px 10px 8px #888888;;
+  background-image: url('../images/paper.png');
+  background-repeat: no-repeat;
+  background-size: 140%;
+  background-position: center;
+  display: grid;
+  grid-template-areas: "head head head pinfo"
+                        ". . . ."
+                        "specimen . staken sreceived"
+                        ". . . ."
+                        ". . . ."
+                        "quan1 . vals1 range1"
+                        "remark1 remark1 remark1 remark1"
+                        ". . . ."
+                        ". . . ."
+                        "quan2 . vals2 range2"
+                        "remark2 remark2 remark2 remark2"
+                        ". . . ."
+                        ". . . ."
+                        ". . . ."
+                        ". . . ."
+                        "repid repid . send"
+                        "issued . received send";
+  padding: 50px;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+}
+
+.lab-report-item{
+  color: black;
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 200;
+}
+
+.make-bold{
+  font-weight: 500;
+}
+.head{
+  grid-area: head;
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 30px;
+  margin: 0;received
+}
+
+.pinfo{
+  grid-area: pinfo;
+  text-align: right;
+}
+
+.specimen
+{
+  grid-area: specimen;
+}
+
+.staken
+{
+  grid-area: staken;
+}
+
+.sreceived
+{
+  grid-area: sreceived;
+}
+
+.quan1{
+  grid-area: quan1;
+}
+
+.vals1{
+  grid-area: vals1;
+}
+
+.range1{
+  grid-area: range1;
+}
+
+.remark1{
+  grid-area: remark1;
+}
+
+.quan2{
+  grid-area: quan2;
+}
+
+.vals2{
+  grid-area: vals2;
+}
+
+.range2{
+  grid-area: range2;
+}
+
+.remark2{
+  grid-area: remark2;
+}
+
+.repid{
+  grid-area: repid;
+}
+
+.issued{
+  grid-area: issued;
+}
+
+.received{
+  grid-area: received;
+}
+
+.report-send-file{
+  grid-area: send;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.button5 {
+  background-color: transparent;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}

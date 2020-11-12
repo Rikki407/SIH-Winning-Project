@@ -1,0 +1,74 @@
+/**
+ * PatientRecord Model File
+ */
+
+namespace composers.healthrecords
+import composers.participants.Patient
+
+enum Gender {
+  o MALE
+  o FEMALE
+  o OTHER
+}
+
+enum Race {
+  o ASIAN
+  o WHITE
+  o BLACK
+  o HISPANIC
+  o TWO_OR_MORE
+  o OTHER
+}
+
+asset PatientInfo identified by patientID {
+  o String patientID
+  o Name name
+  o ContactDetails contactDetails optional
+  o DateTime dayOfBirth optional
+  o Gender gender optional
+  o Race race optional
+  o String[] medicationArray
+  o Visits[] pastVisitsArray
+}
+
+concept Name {
+  o String firstName
+  o String lastName
+}
+
+concept Address {
+  o String city optional
+  o String country optional
+  o String street optional
+  o Integer zip optional
+  o String box optional
+}
+
+concept ContactDetails {
+  o String email optional
+  o String phone optional
+  o	Address address optional
+}
+
+concept Visits {
+  o DateTime visitDate
+  o String procedure optional
+  o String doctor optional 
+  o Address location optional 
+  o String[] medicinePrescribed optional
+}
+
+transaction updateMedication {
+  o String[] medicationArray
+  o PatientInfo patientInfo
+}
+
+transaction updatePastVisits {
+  o Visits newVisit
+  o PatientInfo patientInfo
+}
+
+transaction updateContact {
+  o ContactDetails contactDetails
+  o PatientInfo patientInfo
+}

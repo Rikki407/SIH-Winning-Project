@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+        * @Package: Multipurpose Dashboard
+        * @Version: 1.0.0
+    -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dashboard</title>
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- For iPhone -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../assets/images/apple-touch-icon-57-precomposed.png"
+    />
+    <!-- For iPhone 4 Retina display -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="../assets/images/apple-touch-icon-114-precomposed.png"
+    />
+    <!-- For iPad -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="../assets/images/apple-touch-icon-72-precomposed.png"
+    />
+    <!-- For iPad Retina display -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="../assets/images/apple-touch-icon-144-precomposed.png"
+    />
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link
+      href="../assets/plugins/pace/pace-theme-flash.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="../assets/plugins/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/plugins/bootstrap/css/bootstrap-theme.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/fonts/font-awesome/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/fonts/webfont/cryptocoins.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/css/animate.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/plugins/perfect-scrollbar/perfect-scrollbar.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <link
+      href="../assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="../assets/plugins/morris-chart/css/morris.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="../assets/plugins/calendar/fullcalendar.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="../assets/plugins/icheck/skins/minimal/minimal.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="../assets/css/responsive.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- CORE CSS TEMPLATE - END -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    
+    <style>
+      #myInput {
+  width: 600px;
+}
+.container {
+  margin-top: 50px;
+}
+
+.button {
+  margin: 1rem auto;
+  text-align: right;
+}
+div.scroll {
+  margin: 4px, 4px;
+  padding: 4px;
+  height: 550px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+div.card {
+  width: 80%;
+  margin-bottom: 0.5rem;
+}
+h5.c-title {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+p.c-text {
+  font-size: 0.55rem;
+  margin-bottom: 0;
+}
+
+.btn-outline-primary {
+  line-height: 1;
+  padding: 0.15rem 0.5rem;
+}
+.img-thumbnail {
+  height: 27rem;
+  margin: auto;
+}
+.photo {
+  margin-top: 1rem;
+  text-align: center;
+}
+.fas {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+.form-inline {
+  width: 100%;
+}
+
+#search {
+  border: none;
+  background: white;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+    </style>
+    <script
+      src="https://kit.fontawesome.com/9d2cf55af0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <!-- END HEAD -->
+
+  <!-- BEGIN BODY -->
+
+  <% include ../navbar %>
+      <!--  SIDEBAR - END -->
+
+      <!-- START CONTENT -->
+      <section id="main-content" class=" ">
+        <!-- <div class="wrapper main-wrapper row" style=""> -->
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-6 col-md-4 mt-8">
+              <!-- we want it to cover 6 units after lg before that its default n here default means 100% that means it will stack up -->
+              <div class="scroll">
+                <% pres.forEach((pre)=>{ %>
+                <div class="card">
+                  <div class="row no-gutters">
+                    <div class="col-sm-6 col1">
+                      <img class="card-img" src="<%= pre.image %>" />
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="card-body">
+                        <h5 class="c-title"><%= pre.name %></h5>
+                        <p class="c-text"><%= pre._id %></p>
+                        <form action="/pharmacy" method="POST">
+                          <input
+                            type="hidden"
+                            name="search"
+                            value="<%= pre._id %>"
+                          />
+                          <button
+                            type="submit"
+                            class="btn btn-outline-primary btn-sm"
+                          >
+                            View
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <% }); %>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-8">
+              <form class="form-inline" action="/pharmacy" method="POST">
+                <input
+                  class="form-control"
+                  id="myInput"
+                  type="text"
+                  placeholder="Search by Prescription ID"
+                  aria-label="Search"
+                  name="search"
+                />
+                <button class="btn-sm" id="search" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+              <div class="photo">
+                <% if(foundpres== null){ %>
+                <img
+                  class="img-thumbnail"
+                  id="image"
+                  src="<%= pres[0].image %>"
+                />
+
+                <% }else { %>
+                <img
+                  class="img-thumbnail"
+                  id="image"
+                  src="<%= foundpres.image %>"
+                />
+                <% } %>
+              </div>
+              <div class="button">
+                <div class="btn btn-primary">Print Reciept</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </section>
+      <!-- END CONTENT -->
+      <div class="page-chatapi hideit">
+        <div class="search-bar">
+          <input type="text" placeholder="Search" class="form-control" />
+        </div>
+
+        <div class="chat-wrapper">
+          <h4 class="group-head">Favourites</h4>
+          <ul class="contact-list">
+            <li class="user-row" id="chat_user_1" data-user-id="1">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-1.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Joge Lucky</a></h4>
+                <span class="status available" data-status="available">
+                  Available</span
+                >
+              </div>
+              <div class="user-status available">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_2" data-user-id="2">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-2.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4>
+                  <a href="index-hos-dashboard.html#">Folisise Chosiel</a>
+                </h4>
+                <span class="status away" data-status="away"> Away</span>
+              </div>
+              <div class="user-status away">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_3" data-user-id="3">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-3.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Aron Gonzalez</a></h4>
+                <span class="status busy" data-status="busy"> Busy</span>
+              </div>
+              <div class="user-status busy">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+          </ul>
+
+          <h4 class="group-head">More Contacts</h4>
+          <ul class="contact-list">
+            <li class="user-row" id="chat_user_4" data-user-id="4">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-4.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Chris Fox</a></h4>
+                <span class="status offline" data-status="offline">
+                  Offline</span
+                >
+              </div>
+              <div class="user-status offline">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_5" data-user-id="5">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-5.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Mogen Polish</a></h4>
+                <span class="status offline" data-status="offline">
+                  Offline</span
+                >
+              </div>
+              <div class="user-status offline">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_6" data-user-id="6">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-1.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Smith Carter</a></h4>
+                <span class="status available" data-status="available">
+                  Available</span
+                >
+              </div>
+              <div class="user-status available">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_7" data-user-id="7">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-2.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Amilia Gozenal</a></h4>
+                <span class="status busy" data-status="busy"> Busy</span>
+              </div>
+              <div class="user-status busy">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_8" data-user-id="8">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-3.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Tahir Jemyship</a></h4>
+                <span class="status away" data-status="away"> Away</span>
+              </div>
+              <div class="user-status away">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_9" data-user-id="9">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-4.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Johanson Wright</a></h4>
+                <span class="status busy" data-status="busy"> Busy</span>
+              </div>
+              <div class="user-status busy">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_10" data-user-id="10">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-5.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Loni Tindall</a></h4>
+                <span class="status away" data-status="away"> Away</span>
+              </div>
+              <div class="user-status away">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_11" data-user-id="11">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-1.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Natcho Herlaey</a></h4>
+                <span class="status idle" data-status="idle"> Idle</span>
+              </div>
+              <div class="user-status idle">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_12" data-user-id="12">
+              <div class="user-img">
+                <a href="index-hos-dashboard.html#"
+                  ><img src="../data/profile/avatar-2.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="index-hos-dashboard.html#">Shakira Swedan</a></h4>
+                <span class="status idle" data-status="idle"> Idle</span>
+              </div>
+              <div class="user-status idle">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chatapi-windows"></div>
+    </div>
+    <!-- END CONTAINER -->
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/plugins/pace/pace.min.js"></script>
+    <script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/plugins/viewport/viewportchecker.js"></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="../assets/js/jquery.min.js"><\/script>');
+    </script>
+    <!-- CORE JS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <script src="../assets/plugins/echarts/echarts-custom-for-dashboard.js"></script>
+
+    <script src="../assets/plugins/flot-chart/jquery.flot.js"></script>
+    <script src="../assets/plugins/flot-chart/jquery.flot.time.js"></script>
+    <script src="../assets/js/chart-flot.js"></script>
+
+    <script src="../assets/js/dashboard-hos.js"></script>
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="../assets/js/scripts.js"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+  </body>
+</html>

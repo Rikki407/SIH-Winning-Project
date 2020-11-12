@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+        * @Package:  Multipurpose Dashboard
+        * @Version: 1.0.0
+    -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Multipurpose Dashboard</title>
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- For iPhone -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../assets/images/apple-touch-icon-57-precomposed.png"
+    />
+    <!-- For iPhone 4 Retina display -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="../assets/images/apple-touch-icon-114-precomposed.png"
+    />
+    <!-- For iPad -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="../assets/images/apple-touch-icon-72-precomposed.png"
+    />
+    <!-- For iPad Retina display -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="../assets/images/apple-touch-icon-144-precomposed.png"
+    />
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link
+      href="../assets/plugins/pace/pace-theme-flash.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="../assets/plugins/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/plugins/bootstrap/css/bootstrap-theme.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/fonts/font-awesome/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/fonts/webfont/cryptocoins.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/css/animate.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/plugins/perfect-scrollbar/perfect-scrollbar.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="../assets/css/responsive.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- CORE CSS TEMPLATE - END -->
+  </head>
+  <!-- END HEAD -->
+
+  <!-- BEGIN BODY -->
+
+  <% include ../navbar %>
+      <!--  SIDEBAR - END -->
+
+      <!-- START CONTENT -->
+      <section id="main-content" class="">
+        <div class="wrapper main-wrapper row" style="">
+          <div class="col-xs-12">
+            <div class="page-title">
+              <div class="pull-left">
+                <!-- PAGE HEADING TAG - START -->
+                <h1 class="title">Add Prescription</h1>
+                <!-- PAGE HEADING TAG - END -->
+              </div>
+
+              <div class="pull-right hidden-xs">
+                <ol class="breadcrumb">
+                  <li>
+                    <a href="https://medical-dash.netlify.app/html/index.html"
+                      ><i class="fa fa-home"></i>Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="hos-book-appointment.html#">Lab</a>
+                  </li>
+                  <li class="active">
+                    <strong>Add Prescription</strong>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <!-- MAIN CONTENT AREA STARTS -->
+
+          <div class="col-xs-12">
+            <div
+              class="add-header-wrapper gradient-blue curved-section text-center"
+            >
+              <h2 class="uppercase bold w-text">Add Prescription</h2>
+              <div class="before-text">Add Prescription</div>
+              <!-- <p class="g-text">Report for Vitamin B12 deficiency test</p> -->
+            </div>
+
+            <div class="bg-w">
+              <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+                <section class="box">
+                  <header class="panel_header">
+                    <h2 class="title pull-left">E Prescription</h2>
+                    <div class="actions panel_actions pull-right">
+                      <a class="box_toggle fa fa-chevron-down"></a>
+                      <a
+                        class="box_setting fa fa-cog"
+                        data-toggle="modal"
+                        href="hos-book-appointment.html#section-settings"
+                      ></a>
+                      <a class="box_close fa fa-times"></a>
+                    </div>
+                  </header>
+                  <div class="content-body">
+                    <div class="row">
+                      <form action="/add-prescription" method="POST">
+                        <input type="hidden" value="<%=f._id%>" name = "appointment"/>
+                        <input type="hidden" value="<%=f.patient_id%>" name = "patient_id"/>
+                        
+                        <div class="col-xs-12">
+                          <div class="form-group">
+                            <label class="form-label" for="field-1"
+                              >Name</label
+                            >
+                            <span class="desc"></span>
+                            <div class="controls">
+                              <input
+                                name="pname"
+                                type="text"
+                                value="<%=f.patient_name%>"
+                                class="form-control"
+                                id="field-1"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                          <div class="form-group">
+                            <label class="form-label" for="field-1"
+                              >Service</label
+                            >
+                            <span class="desc"></span>
+                            <div class="controls">
+                              <input
+                                name="pid"
+                                type="text"
+                                value="<%=f.service%>"
+                                class="form-control"
+                                id="field-1"
+                              />
+                            </div>
+                          </div>
+                        </div>
+<br>
+                        <div class="col-xs-12">
+                          <div class="form-group">
+                            <label class="form-label" for="field-1"
+                              >Medicines Prescribed</label
+                            >
+                           
+                            <!-- try -->
+                            <div class="row">
+                              <center>
+                              <button class="btn btn-primary btn-border btn-corner" 
+                              id="freq" value="Metacin" 
+                              type= "button"
+                              onclick="changeLabel()" 
+                              style="margin: 1%; border-width: 1px;">Metacin</button>
+                              
+                              <button class="btn btn-primary btn-border btn-corner" 
+                              id="freq2" value="Zoloft" 
+                              type= "button"
+                              onclick="changeLabel2()" 
+                              style="margin: 1%; border-width: 1px;">Zoloft</button>
+
+                              <button class="btn btn-primary btn-border btn-corner" 
+                              id="freq3" value="Crestor" 
+                              type= "button"
+                              onclick="changeLabel3()" 
+                              style="margin: 1%; border-width: 1px;">Crestor</button>
+
+                              <button class="btn btn-primary btn-border btn-corner" 
+                              id="freq4" value="Nexium" 
+                              type= "button"
+                              onclick="changeLabel4()"
+                              style="margin: 1%; border-width: 1px;">Nexium</button>
+
+                              <button class="btn btn-primary btn-border btn-corner" 
+                              id="freq5" value="Neurontin" 
+                              type= "button"
+                              onclick="changeLabel5()"
+                              style="margin: 1%; border-width: 1px;">Neurontin</button>
+                              
+ <!-- faster -->
+                              <button class="btn btn-primary btn-border btn-corner" 
+                              id="freq6" value="Aldactazide" 
+                              type= "button"
+                              onclick="changeLabel6()"
+                              style="margin: 1%; border-width: 1px;">Aldactazide</button>
+
+                              <button class="btn btn-primary btn-border btn-corner" 
+                              id="freq7" value="Xalatan" 
+                              type= "button"
+                              onclick="changeLabel7()"
+                              style="margin: 1%; border-width: 1px;">Xalatan</button>
+                            </center>
+                            
+
+
+                          </div>
+                          <br>
+
+
+
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <input
+                                  type="text"
+                                  class="form-control input-lg"
+                                  name="med1"
+                                  id="firstmed"
+                                 
+                                  placeholder="Medicine 1"
+                                />
+                              </div>
+
+                              <div class="col-xs-4">
+                                <!-- <input
+                                  type="text"
+                                  class="form-control input-lg"
+                                  name="des1"
+                                  placeholder="Dosage"
+                                /> -->
+                                <select class="form-control input-lg m-bot15">
+                                  <option disabled selected hidden>Dosage</option>
+                                  <option>Once</option>
+                                  <option>Twice</option>
+                                  <option>Thrice</option>
+                              </select>
+                              </div>
+
+                              <div class="col-xs-4">
+                                <input
+                                  type="time"
+                                  class="form-control input-lg"
+                                  name="tim1"
+                                  placeholder="Time"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12">
+                          <div class="form-group">
+                            <!--  <label class="form-label" for="field-1">Medicine 2</label> -->
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <input
+                                  type="text"
+                                  class="form-control input-lg"
+                                  name="med2"
+                                  id="secMed"
+                                  
+                                  placeholder="Medicine 2"
+                                />
+                              </div>
+
+                              <div class="col-xs-4">
+                                <select class="form-control input-lg m-bot15">
+                                  <option disabled selected hidden>Dosage</option>
+                                  <option>Once</option>
+                                  <option>Twice</option>
+                                  <option>Thrice</option>
+                              </select>
+                              </div>
+
+                              <div class="col-xs-4">
+                                <input
+                                  type="time"
+                                  class="form-control input-lg"
+                                  name="tim2"
+                                  placeholder="Time"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12">
+                          <div class="form-group">
+                            <!--  <label class="form-label" for="field-1">Medicine 2</label> -->
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <input
+                                  type="text"
+                                  class="form-control input-lg"
+                                  name="med3"
+                                  id="thirdMed"
+                                  placeholder="Medicine 3"
+                                />
+                              </div>
+
+                              <div class="col-xs-4">
+                                <!-- <input
+                                  type="text"
+                                  class="form-control input-lg"
+                                  name="des3"
+                                  placeholder="Dosage"
+                                /> -->
+                                <select class="form-control input-lg m-bot15">
+                                  <option disabled selected hidden>Dosage</option>
+                                  <option>Once</option>
+                                  <option>Twice</option>
+                                  <option>Thrice</option>
+                              </select>
+                              </div>
+
+                              <div class="col-xs-4">
+                                <input
+                                  type="time"
+                                  class="form-control input-lg"
+                                  name="tim3"
+                                  placeholder="Time"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                          <div class="form-group">
+                            <!-- <label class="form-label" for="field-1">Medicine 2</label>
+                                                    <span class="desc"></span>
+                                                    <div class="controls">
+                                                        <input name="serumb12" type="text" class="form-control" id="field-1">
+                                                    </div> -->
+                            <!--  <label class="form-label" for="field-1">Medicine 1</label> -->
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <input
+                                  type="text"
+                                  class="form-control input-lg"
+                                  name="med4"
+                                  id="fourthMed"
+                                  placeholder="Medicine 4"
+                                />
+                              </div>
+
+                              <div class="col-xs-4">
+                                <select class="form-control input-lg m-bot15">
+                                  <option disabled selected hidden>Dosage</option>
+                                  <option>Once</option>
+                                  <option>Twice</option>
+                                  <option>Thrice</option>
+                              </select>
+                              </div>
+
+                              <div class="col-xs-4">
+                                <input
+                                  type="time"
+                                  class="form-control input-lg"
+                                  name="tim4"
+                                  placeholder="Time"
+                                />
+                              </div>
+
+                              <!--  <div class="col-xs-3">
+                                    <input type="text" class="form-control input-lg" placeholder=".col-xs-3">
+                                </div> -->
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="col-xs-12 col-sm-9 col-md-8 padding-bottom-30"
+                        >
+                          <div class="text-left">
+                            
+                            <button
+                              type="submit"
+                              class="btn btn-lg btn-primary"
+                            >
+                              Save
+                            </button>
+                            <button type="button" class="btn btn-lg">
+                              Cancel
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAIN CONTENT AREA ENDS -->
+        </div>
+      </section>
+      <!-- END CONTENT -->
+      <div class="page-chatapi hideit">
+        <div class="search-bar">
+          <input type="text" placeholder="Search" class="form-control" />
+        </div>
+
+        <div class="chat-wrapper">
+          <h4 class="group-head">Favourites</h4>
+          <ul class="contact-list">
+            <li class="user-row" id="chat_user_1" data-user-id="1">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-1.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="hos-book-appointment.html#">Joge Lucky</a></h4>
+                <span class="status available" data-status="available">
+                  Available</span
+                >
+              </div>
+              <div class="user-status available">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_2" data-user-id="2">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-2.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4>
+                  <a href="hos-book-appointment.html#">Folisise Chosiel</a>
+                </h4>
+                <span class="status away" data-status="away"> Away</span>
+              </div>
+              <div class="user-status away">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_3" data-user-id="3">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-3.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="hos-book-appointment.html#">Aron Gonzalez</a></h4>
+                <span class="status busy" data-status="busy"> Busy</span>
+              </div>
+              <div class="user-status busy">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+          </ul>
+
+          <h4 class="group-head">More Contacts</h4>
+          <ul class="contact-list">
+            <li class="user-row" id="chat_user_4" data-user-id="4">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-4.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="hos-book-appointment.html#">Chris Fox</a></h4>
+                <span class="status offline" data-status="offline">
+                  Offline</span
+                >
+              </div>
+              <div class="user-status offline">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_5" data-user-id="5">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-5.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="hos-book-appointment.html#">Mogen Polish</a></h4>
+                <span class="status offline" data-status="offline">
+                  Offline</span
+                >
+              </div>
+              <div class="user-status offline">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_6" data-user-id="6">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-1.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="hos-book-appointment.html#">Smith Carter</a></h4>
+                <span class="status available" data-status="available">
+                  Available</span
+                >
+              </div>
+              <div class="user-status available">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_7" data-user-id="7">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-2.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="hos-book-appointment.html#">Amilia Gozenal</a></h4>
+                <span class="status busy" data-status="busy"> Busy</span>
+              </div>
+              <div class="user-status busy">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_8" data-user-id="8">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-3.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="hos-book-appointment.html#">Tahir Jemyship</a></h4>
+                <span class="status away" data-status="away"> Away</span>
+              </div>
+              <div class="user-status away">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_9" data-user-id="9">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-4.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4>
+                  <a href="hos-book-appointment.html#">Johanson Wright</a>
+                </h4>
+                <span class="status busy" data-status="busy"> Busy</span>
+              </div>
+              <div class="user-status busy">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_10" data-user-id="10">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-5.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="hos-book-appointment.html#">Loni Tindall</a></h4>
+                <span class="status away" data-status="away"> Away</span>
+              </div>
+              <div class="user-status away">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_11" data-user-id="11">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-1.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="hos-book-appointment.html#">Natcho Herlaey</a></h4>
+                <span class="status idle" data-status="idle"> Idle</span>
+              </div>
+              <div class="user-status idle">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+            <li class="user-row" id="chat_user_12" data-user-id="12">
+              <div class="user-img">
+                <a href="hos-book-appointment.html#"
+                  ><img src="../data/profile/avatar-2.png" alt=""
+                /></a>
+              </div>
+              <div class="user-info">
+                <h4><a href="hos-book-appointment.html#">Shakira Swedan</a></h4>
+                <span class="status idle" data-status="idle"> Idle</span>
+              </div>
+              <div class="user-status idle">
+                <i class="fa fa-circle"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chatapi-windows"></div>
+    </div>
+    <!-- END CONTAINER -->
+    <!-- LOAD FILES AT PAGE END FOR FATER LOADING -->
+
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/plugins/pace/pace.min.js"></script>
+    <script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/plugins/viewport/viewportchecker.js"></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="../assets/js/jquery.min.js"><\/script>');
+    </script>
+
+
+
+
+<!-- tryingggggg -->
+<script>
+  function changeLabel() {
+    // var empName;
+    // let empName = document.getElementById('freq');
+
+    document.getElementById('firstmed').value = document.getElementById('freq').value + " / Paracetamol";
+
+      // let medone = document.getElementById('firstmed');
+      // let empName = document.getElementById('freq').value;
+      // medone.value = empName;      
+      
+      // faster
+  }
+  function changeLabel2() {
+    document.getElementById('secMed').value = document.getElementById('freq2').value + " / Sertraline HCI";
+  }
+  function changeLabel3() {
+    document.getElementById('thirdMed').value = document.getElementById('freq3').value + " / Rosuvastatin cal";
+  }
+  function changeLabel4() {
+    document.getElementById('fourthMed').value = document.getElementById('freq4').value + " / Esomeprazole DR";
+  }
+  function changeLabel5() {
+    document.getElementById('fourthMed').value = document.getElementById('freq5').value + " / Gabapentin";
+  }
+  function changeLabel6() {
+    document.getElementById('fourthMed').value = document.getElementById('freq6').value + " / Aldactazide";
+  }
+  function changeLabel7() {
+    document.getElementById('fourthMed').value = document.getElementById('freq7').value + " / Latanoprost sol";
+  }
+</script>
+<!-- tryinggggggg -->
+
+
+    <!-- CORE JS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="../assets/js/scripts.js"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+  </body>
+</html>
