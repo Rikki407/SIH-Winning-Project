@@ -1,5 +1,5 @@
-# SIH-Winning-Project
-<h1>Project Demo Link</h1>
+# SmartIndiaHackathon-Winning-Project
+<h2>Project Demo Link</h1>
 <a href="https://drive.google.com/file/d/1VoyVJb716-2KwX3K0CiKRX98Qy-k6eZF/view?usp=sharing">Click here </a>to get a quick video demonstration of the whole project
 <h2>Project Description </h2>
 <p>DHRS or Decentralized Health Record System was designed using Bootstrap, NodeJS, Cloud Functions, Google Vision API and Hyperledger Fabric blockchain primarily to
