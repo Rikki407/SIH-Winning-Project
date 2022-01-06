@@ -1,4 +1,4 @@
-# SmartIndiaHackathon-Winning-Project
+# SIH 2019 Winning Project
 <h2>Project Demo Link</h1>
 <a href="https://drive.google.com/file/d/1VoyVJb716-2KwX3K0CiKRX98Qy-k6eZF/view?usp=sharing">Click here </a>to get a quick video demonstration of the whole project
 <h2>Project Description </h2>
