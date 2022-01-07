@@ -6,7 +6,7 @@
 <p>DHRS or Decentralized Health Record System was designed using Bootstrap, NodeJS, Cloud Functions, Google Vision API and Hyperledger Fabric blockchain primarily to
 decentralized the health records of the patients for a smooth transition right from the begining of scheduling an appointment to the final billing. For more please click on the video mentioned above</p>
 
-<img width="100%" src="https://user-images.githubusercontent.com/26832011/148330618-8143487c-a0b0-45b9-acaa-c3248b8af865.gif"/>
+<img width="100%" src="https://user-images.githubusercontent.com/26832011/148510226-9a66776d-44f0-43fc-ac8d-e631426cbd84.gif"/>
 
 <h2> Hey there! I'm Rishab Lamba. <img src="https://github.com/souvikguria98/souvikguria98/blob/master/Hi.gif" width="25"></h2>
 <img align="right" alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="500"/>
